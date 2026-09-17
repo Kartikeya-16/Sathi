@@ -1,0 +1,77 @@
+# =========================================
+# Sathii Monorepo Root .gitignore
+# =========================================
+
+# Environment Secrets & Local Configs (Never commit real credentials)
+.env
+.env.*
+.env*.local
+!.env.example
+*.pem
+*.key
+*.crt
+certs/
+
+# Frontend (Next.js / Node)
+node_modules/
+afrontend/node_modules/
+.next/
+afrontend/.next/
+out/
+afrontend/out/
+build/
+dist/
+coverage/
+.vercel/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backend (Python / FastAPI / ML Services)
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*/.venv/
+*/venv/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+
+# Databases, SQLite WAL & Local Storage
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+finpilot.db
+
+# Heavy Datasets, Model Weights & Checkpoints
+data/
+models/
+*/data/
+*/models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# Operating System & IDE Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
